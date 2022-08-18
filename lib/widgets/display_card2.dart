@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 
 class DisplayCard2 extends StatelessWidget {
-  const DisplayCard2({Key? key}) : super(key: key);
+  final String time;
+  final Color primaryColor;
+  final Color secondaryColor;
+  const DisplayCard2({
+    required this.primaryColor,
+    required this.secondaryColor,
+    required this.time,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    return SizedBox(
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: screenSize.height * 0.008),
       height: screenSize.height * 0.13,
       width: screenSize.width * 1,
       child: Row(
@@ -15,9 +24,9 @@ class DisplayCard2 extends StatelessWidget {
         children: [
           Column(
             children: [
-              const Text(
-                '10:00 AM',
-                style: TextStyle(
+              Text(
+                time,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -30,7 +39,7 @@ class DisplayCard2 extends StatelessWidget {
           ),
           Expanded(
             child: Card(
-              color: Colors.pink[50],
+              color: primaryColor,
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Column(
@@ -41,22 +50,87 @@ class DisplayCard2 extends StatelessWidget {
                       'Basic Physics',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.pink[200],
+                        color: secondaryColor,
                       ),
                     ),
                     Row(
                       children: [
                         Icon(
                           Icons.location_on_outlined,
-                          color: Colors.pink[200],
+                          color: secondaryColor,
                         ),
                         Text(
                           'Physics Building Floor 2, 1A',
                           style: TextStyle(
-                            color: Colors.pink[200],
+                            color: secondaryColor,
                           ),
                         )
                       ],
+                    ),
+                    SizedBox(
+                      height: screenSize.height * 0.04,
+                      width: screenSize.width * 0.6,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 2,
+                            top: 0,
+                            height: 24,
+                            width: 24,
+                            child: Container(
+                              width: 50,
+                              height: 50,
+                              //color: Colors.blue,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.grey,
+                                border: Border.all(
+                                  color: Colors.white,
+                                  width: 3,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 15,
+                            top: 0,
+                            height: 24,
+                            width: 24,
+                            child: Container(
+                              width: 50,
+                              height: 50,
+                              //color: Colors.blue,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.grey,
+                                border: Border.all(
+                                  color: Colors.white,
+                                  width: 3,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 30,
+                            top: 0,
+                            height: 24,
+                            width: 24,
+                            child: Container(
+                              width: 50,
+                              height: 50,
+                              //color: Colors.blue,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.grey,
+                                border: Border.all(
+                                  color: Colors.white,
+                                  width: 3,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),

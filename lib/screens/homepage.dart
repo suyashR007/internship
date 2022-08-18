@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:internship/utils/colors.dart';
 import 'package:internship/utils/display_card_list.dart';
+import 'package:internship/utils/image_list.dart';
 import 'package:internship/widgets/display_card2.dart';
 import 'package:internship/widgets/floating_buttons.dart';
 
@@ -219,7 +220,52 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   SizedBox(height: screenSize.height * 0.02),
-                  const DisplayCard2(),
+                  const DisplayCard2(
+                    primaryColor: Color.fromARGB(255, 249, 209, 222),
+                    secondaryColor: Color.fromARGB(255, 244, 143, 177),
+                    time: '10:00 AM',
+                  ),
+                  const DisplayCard2(
+                    primaryColor: Color.fromARGB(255, 29, 143, 250),
+                    secondaryColor: Colors.purple,
+                    time: '11:00 AM',
+                  ),
+                  const DisplayCard2(
+                    primaryColor: Color.fromARGB(255, 29, 143, 250),
+                    secondaryColor: Colors.purple,
+                    time: '12:00 AM',
+                  ),
+                  const DisplayCard2(
+                    primaryColor: Color.fromARGB(255, 29, 143, 250),
+                    secondaryColor: Colors.purple,
+                    time: '01:00 PM',
+                  ),
+                  SizedBox(
+                    height: screenSize.height * 0.02,
+                  ),
+                  const Text(
+                    'Checkout Now',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: screenSize.height * 0.015,
+                  ),
+                  CarouselSlider(
+                    items: listImage,
+                    options: CarouselOptions(
+                      height: screenSize.height * 0.30,
+                      enlargeCenterPage: true,
+                      viewportFraction: 0.8,
+                      disableCenter: true,
+                      clipBehavior: Clip.none,
+                    ),
+                  ),
+                  SizedBox(
+                    height: screenSize.height * 0.08,
+                  )
                 ],
               ),
             )
