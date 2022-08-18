@@ -1,13 +1,7 @@
 import 'package:internship/widgets/image_visual.dart';
 
 List<ImageDisplay> listImage = const [
-  ImageDisplay(
-      imageString:
-          'https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
-  ImageDisplay(
-      imageString:
-          'https://images.pexels.com/photos/2899097/pexels-photo-2899097.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
-  ImageDisplay(
-      imageString:
-          'https://images.pexels.com/photos/2820884/pexels-photo-2820884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
+  ImageDisplay(imageString: 'assets/tile_3img01.png'),
+  ImageDisplay(imageString: 'assets/tile1img02.png'),
+  ImageDisplay(imageString: 'assets/tile2img2.png'),
 ];

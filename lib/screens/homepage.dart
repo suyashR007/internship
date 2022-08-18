@@ -120,6 +120,7 @@ class _HomePageState extends State<HomePage> {
                                   child: Image.asset('assets/profile_pic.png'),
                                 ),
                               ),
+                              SizedBox(height: screenSize.height * 0.01),
                               const Text(
                                 'Instructor ID: 18445',
                                 style: TextStyle(
@@ -200,6 +201,7 @@ class _HomePageState extends State<HomePage> {
                       viewportFraction: 0.6,
                       disableCenter: true,
                       clipBehavior: Clip.none,
+                      autoPlay: true,
                     ),
                   ),
                   SizedBox(height: screenSize.height * 0.02),
@@ -221,23 +223,23 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: screenSize.height * 0.02),
                   const DisplayCard2(
-                    primaryColor: Color.fromARGB(255, 249, 209, 222),
-                    secondaryColor: Color.fromARGB(255, 244, 143, 177),
+                    primaryColor: Color.fromRGBO(255, 192, 203, 1),
+                    secondaryColor: Color.fromRGBO(188, 42, 22, 1),
                     time: '10:00 AM',
                   ),
                   const DisplayCard2(
-                    primaryColor: Color.fromARGB(255, 29, 143, 250),
-                    secondaryColor: Colors.purple,
+                    primaryColor: Color.fromRGBO(204, 204, 255, 1),
+                    secondaryColor: Color.fromRGBO(58, 58, 129, 1),
                     time: '11:00 AM',
                   ),
                   const DisplayCard2(
-                    primaryColor: Color.fromARGB(255, 29, 143, 250),
-                    secondaryColor: Colors.purple,
+                    primaryColor: Color.fromRGBO(255, 203, 196, 1),
+                    secondaryColor: Color.fromRGBO(188, 42, 22, 1),
                     time: '12:00 AM',
                   ),
                   const DisplayCard2(
-                    primaryColor: Color.fromARGB(255, 29, 143, 250),
-                    secondaryColor: Colors.purple,
+                    primaryColor: Color.fromRGBO(159, 246, 231, 1),
+                    secondaryColor: Color.fromRGBO(12, 103, 87, 1),
                     time: '01:00 PM',
                   ),
                   SizedBox(
@@ -256,6 +258,8 @@ class _HomePageState extends State<HomePage> {
                   CarouselSlider(
                     items: listImage,
                     options: CarouselOptions(
+                      autoPlay: true,
+                      initialPage: 1,
                       height: screenSize.height * 0.30,
                       enlargeCenterPage: true,
                       viewportFraction: 0.8,

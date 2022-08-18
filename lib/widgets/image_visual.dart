@@ -13,7 +13,7 @@ class ImageDisplay extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
       ),
-      child: Image.network(
+      child: Image.asset(
         imageString,
         fit: BoxFit.fill,
       ),
